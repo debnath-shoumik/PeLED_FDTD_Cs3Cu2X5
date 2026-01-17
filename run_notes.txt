@@ -1,0 +1,71 @@
+FDTD Simulation Run Notes
+========================
+
+This document summarizes the key simulation settings used in the
+finite-difference time-domain (FDTD) simulations reported in the associated
+manuscript on Cs₃Cu₂X₅-based perovskite light-emitting diodes.
+
+Software
+--------
+ANSYS Lumerical FDTD Solutions
+
+Simulation File
+---------------
+- File type: .fsp (Lumerical FDTD project file)
+- The .fsp file contains the complete simulation setup, including geometry,
+  sources, monitors, mesh settings, and boundary conditions.
+
+Simulation Type
+---------------
+3D FDTD simulation of a perovskite LED (PeLED) employing the lead-free copper
+halide perovskite Cs₃Cu₂X₅ (X = Cl, Br, or I) as the emissive layer.
+
+Geometry Overview
+-----------------
+- Substrate and electrodes
+- Electron transport layer (ETL)
+- Cs₃Cu₂X₅ emissive layer
+- Hole transport layer (HTL)
+
+The representative device geometry is fully defined within the provided .fsp file.
+
+Source Definition
+-----------------
+- Electric dipole source
+- Emission wavelength range: Visible (as reported in the manuscript)
+- Dipole orientations: In-plane and out-of-plane configurations
+- Dipole location: Within the Cs₃Cu₂X₅ emissive layer
+
+Boundary Conditions
+-------------------
+- Lateral directions: Periodic boundary conditions
+- Vertical direction: Perfectly matched layers (PML)
+
+Mesh Settings
+-------------
+- Non-uniform mesh
+- Local mesh refinement applied around the emissive region
+- Coarser mesh used elsewhere to reduce computational cost
+
+Monitors
+--------
+- Power monitors for radiated power calculation
+- Near-field monitors for electric field distribution
+- Far-field projection monitor for light extraction efficiency (LEE)
+- Normalization monitors for emission enhancement analysis
+
+Simulation Outputs
+------------------
+- Emission enhancement metrics
+- Light extraction efficiency (LEE)
+- Near-field electric field distributions
+- Far-field radiation patterns
+
+Notes
+-----
+- Raw field data and time-domain monitor outputs are not included in this
+  repository due to data size and software-specific constraints.
+- The shared .fsp file represents a reproducible reference configuration
+  illustrating the simulation methodology used in this work.
+- Additional information and data can be obtained from the corresponding
+  author upon reasonable request.
